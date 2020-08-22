@@ -23,6 +23,7 @@ class Questions extends Component {
     render() {
         let questions = (this.props.quiz.questions) ?
             this.props.quiz.questions.slice(this.props.pager.index, this.props.pager.index + this.props.pager.size) : [];
+        
         return (
             <div id="quiz">
                 <h2 className="text-center font-weight-normal">{this.props.quiz.name}</h2>

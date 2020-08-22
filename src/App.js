@@ -37,7 +37,6 @@ class App extends Component {
     let url = quizId || this.props.quizId;
     fetch(`../${url}`).then(res => res.json()).then(res => {
       let quiz = res;
-      console.log(quiz, "quiz")
       quiz.questions.forEach(q => {
         q.options.forEach(o => o.selected = false);
       });
